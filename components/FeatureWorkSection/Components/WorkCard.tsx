@@ -6,7 +6,7 @@ const WorkCard = ({ image, title, link }: { image: string, title: string, link: 
       <img
         src={image}
         alt={title}
-        className=" w-full h-[363px] md:h-[470px] object-cover"
+        className=" w-full h-[363px] md:h-[470px] object-cover rounded-lg "
       />
       <div className="mt-2 md:mt-6 p-6 text-center font-montserrat">
         <h3 className=" text-lg md:text-[30px] font-bold mb-3">{title}</h3>
