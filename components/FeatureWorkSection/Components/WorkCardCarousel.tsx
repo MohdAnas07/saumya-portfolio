@@ -32,12 +32,11 @@ const WorkCardCarousel = () => {
         </Swiper>
       </div>
 
-      <div className="flex flex-col md:hidden slider-container mx-auto">
+      <div className="flex flex-col gap-4 md:hidden justify-center items-center">
 
         {workData.map((card, index) => (
-          <SwiperSlide key={index}>
             <WorkCard image={card.image} title={card.title} link={card.link} />
-          </SwiperSlide>
+
         ))}
       </div>
     </div>
