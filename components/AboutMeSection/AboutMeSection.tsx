@@ -12,7 +12,7 @@ const AboutMeSection = () => {
         {/* Left Section - About Text */}
         <div className="w-[60%] text-left ">
 
-          <p className="font-montserrat text-[18px] md:text-[40px] leading-[1.8] text-[#333]">
+          <h6 className="font-montserrat text-[18px] md:text-[40px] leading-[1.8] text-[#333]">
             I’m <span className="relative font-bold text-[#6D4C41]">
               SAUMYA GAUTAM
               <InfoBox
@@ -35,7 +35,7 @@ const AboutMeSection = () => {
                 ClassName='bottom-[-30px] left-[40%]'
               />
               </span> that solve real-world problems.
-          </p>
+          </h6>
           
           <Button text={'Let’s Connect'} />
         </div>
