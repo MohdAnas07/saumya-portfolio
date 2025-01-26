@@ -12,7 +12,7 @@ const TopHeading: React.FC<TopHeadingProps> = ({ title, subTitle }) => {
         <img
           src="/images/decoresImg/three_line.png"
           alt="Star Decor"
-          className="absolute bottom-[37px] md:bottom-[-10px] left-[-12px] md:left-[-35px] rotate-90 md:rotate-0 w-[40px] h-[50px]  md:w-[47px] md:h-[67px] "
+          className="absolute bottom-[37px] md:bottom-[-10px] left-[-12px] md:left-[-35px] rotate-90 md:rotate-0 w-[40px] h-[50px]  md:w-[47px] md:h-[67px] faded-effect "
           draggable={false}
         />
 

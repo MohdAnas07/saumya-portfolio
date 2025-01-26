@@ -58,7 +58,7 @@ const AboutMeSection = () => {
               <img
                 src="/images/decoresImg/three_line.png"
                 alt="Star Decor"
-                className="absolute top-[-25px] left-[-20px] rotate-90 w-[47px] h-[67px] "
+                className="absolute top-[-25px] left-[-20px] rotate-90 w-[47px] h-[67px] faded-effect "
                 draggable={false}
               />
             </div>
