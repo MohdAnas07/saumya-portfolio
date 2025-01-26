@@ -1,46 +1,44 @@
 import React from 'react';
-import Slider from 'react-slick';
-import WorkCard from './WorkCard';
-import { workData } from '@/Data/workData';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import './styles.css'
 
-import './styles.css';
-
-// import required modules
-import { Pagination } from 'swiper/modules';
-import { Navigation } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
+import WorkCard from './WorkCard';
+import { workData } from '@/Data/workData';
 
 const WorkCardCarousel = () => {
   return (
-    <div className="w-full py-10 z-1">
-      {/* <div className=" mx-auto px-4 flex  "> */}
-      <div className="slider-container">
+    <div className="w-full py-10 bg-[#FFFCF2]">
+      <div className="hidden md:block slider-container mx-auto">
         <Swiper
           navigation={true}
           slidesPerView={3}
-          centeredSlides={true}
-          spaceBetween={30}
+          centeredSlides={false} /* Change to false for standard alignment */
+          spaceBetween={20} /* Adjust spacing between slides */
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination, Navigation]}
-          className="mySwiper bg-[bg-[#FFFCF2]]"
+          modules={[ Navigation]}
+          className="mySwiper"
         >
           {workData.map((card, index) => (
-            <SwiperSlide>
-              <div key={index} className="p-4">
-                <WorkCard image={card.image} title={card.title} link={card.link} />
-              </div>
+            <SwiperSlide key={index}>
+              <WorkCard image={card.image} title={card.title} link={card.link} />
             </SwiperSlide>
           ))}
-
         </Swiper>
+      </div>
 
+      <div className="flex flex-col md:hidden slider-container mx-auto">
+
+        {workData.map((card, index) => (
+          <SwiperSlide key={index}>
+            <WorkCard image={card.image} title={card.title} link={card.link} />
+          </SwiperSlide>
+        ))}
       </div>
     </div>
   );
