@@ -13,7 +13,7 @@ const WorkCard = ({ image, title, link }: { image: string, title: string, link: 
 
         <button
           onClick={() => window.location.href = link}
-          className={` font-montserrat border border-[#6D4C41] rounded-[10px] px-4 py-2 text-[#6D4C41] hover:bg-[#8A6C59] hover:text-white transition-all text-lg md:text-[30px] font-medium cursor-pointer inline mt-6  `}>
+          className={` font-montserrat border border-[#6D4C41] rounded-[10px] px-4 py-2 text-[#6D4C41] hover:bg-[#8A6C59] hover:text-white transition-all text-lg md:text-[24px] font-medium cursor-pointer inline mt-6  `}>
           See work
         </button>
       </div>
