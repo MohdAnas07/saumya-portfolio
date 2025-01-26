@@ -52,9 +52,9 @@ const HeroSection = () => {
           draggable={false}
         />
         {/* Typewriter Effect */}
-        <p className="font-annie text-[70px] italic text-[#6D4C41] mt-2">
+        <h6 className="font-annie text-[70px] italic text-[#6D4C41] mt-2">
           <TypeWriter data={typoData} />
-        </p>
+        </h6>
         
       </div>
 
