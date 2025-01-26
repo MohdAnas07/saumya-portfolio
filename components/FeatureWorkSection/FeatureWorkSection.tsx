@@ -4,7 +4,7 @@ import TopHeading from './Components/TopHeader'
 import dynamic from 'next/dynamic';
 
 const WorkCardCarousel = dynamic(() => import('./Components/WorkCardCarousel'), {
-  ssr: false, // Disable server-side rendering for this component
+  ssr: false,
 });
 
 const FeatureWorkSection = () => {

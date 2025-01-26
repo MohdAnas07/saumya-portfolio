@@ -1,5 +1,12 @@
 import React from 'react';
 import SkillsAutoScroll from './components/SkillsAutoScroll';
+import TypeWriter from '../TypeWriter/TypeWriter';
+
+const typoData: string[] = [
+  'ux and ui design',
+  'curiosity and innovation',
+  'strategy and process',
+]
 
 const HeroSection = () => {
   return (
@@ -44,9 +51,11 @@ const HeroSection = () => {
           className="absolute bottom-[2rem] right-[0rem] w-[47px] h-[67px] "
           draggable={false}
         />
+        {/* Typewriter Effect */}
         <p className="font-annie text-[70px] italic text-[#6D4C41] mt-2">
-          ux and ui design
+          <TypeWriter data={typoData} />
         </p>
+        
       </div>
 
       {/*  Skills Feature AutoScroll Section */}

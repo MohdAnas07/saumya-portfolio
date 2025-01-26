@@ -6,7 +6,7 @@ const InfiniteGalleryScrolling = ({ data }: { data: any }) => {
     <div className="relative my-20 ">
       <div className="flex items-center gap-12 animate-marquee2">
         {data.map((item: any, index: number) => (
-          <div className='flex items-center gap-12'>
+          <div key={index} className='flex items-center gap-12'>
             <img
               src={item.icon}
               className=" w-24 md:w-40 rotate-[-8deg] "
