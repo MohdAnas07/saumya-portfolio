@@ -18,11 +18,11 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 h-[120px] flex justify-center items-center px-4 md:px-[80px] bg-logo text-white md:bg-background">
+    <header className="sticky top-0 z-40 h-[84px] md:h-[120px] flex justify-center items-center px-4 md:px-[80px] bg-logo text-white md:bg-background">
       <nav className="w-full flex items-center justify-between gap-4">
         {/* Logo */}
         <div>
-          <h1 className="font-spicyrice text-[50px] text-white md:text-[#6D4C41]">
+          <h1 className="font-spicyrice text-[24px] md:text-[50px] text-white md:text-[#6D4C41]">
             100mya
           </h1>
         </div>

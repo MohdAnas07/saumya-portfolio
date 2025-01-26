@@ -37,7 +37,7 @@ const AboutMeSection = () => {
             </span> that solve real-world problems.
           </h6>
 
-          <Button text={'Let’s Connect'} />
+          <Button text={'Let’s Connect'} className='mt-4 md:mt-6' />
         </div>
 
         {/* Right Section - Image and Highlights */}
