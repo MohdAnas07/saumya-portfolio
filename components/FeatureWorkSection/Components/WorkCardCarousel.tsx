@@ -7,26 +7,28 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import './styles.css';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 const WorkCardCarousel = () => {
-
   return (
     <div className="w-full py-10 z-1">
       {/* <div className=" mx-auto px-4 flex  "> */}
       <div className="slider-container">
         <Swiper
+          navigation={true}
           slidesPerView={3}
           centeredSlides={true}
           spaceBetween={30}
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
           className="mySwiper bg-[bg-[#FFFCF2]]"
         >
           {workData.map((card, index) => (
