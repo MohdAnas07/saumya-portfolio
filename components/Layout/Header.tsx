@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import CountUp from "../Animations/CountUp";
+import FadeContent from "../Animations/FadeContent";
+import AnimatedContent from "../Animations/AnimatedContent";
+import Magnet from "../Animations/Magnet";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("Home");
@@ -22,12 +26,20 @@ const Header = () => {
       <nav className="w-full flex items-center justify-between gap-4">
         {/* Logo */}
         <div>
-          <h1 className="font-spicyrice text-[24px] md:text-[50px] text-white md:text-[#6D4C41]">
-            100mya
+          <h1 className="w-[180px] font-spicyrice text-[24px] md:text-[50px] text-white md:text-[#6D4C41]">
+            <CountUp
+              from={1}
+              to={100}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+            />mya
           </h1>
         </div>
 
         {/* Desktop Navigation Menu */}
+
         <ul className="hidden md:flex items-center gap-6 bg-[#A28B7C36] p-3 rounded-[10px] w-[452px] justify-center font-montserrat">
           <Link
             to="home"
@@ -77,9 +89,22 @@ const Header = () => {
         </ul>
 
         {/* Resume Button for Desktop */}
-        <div className="hidden md:block">
-          <Button text={"Resume"} />
-        </div>
+        {/* <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}> */}
+        <AnimatedContent
+          distance={200}
+          direction="horizontal"
+          reverse={false}
+          config={{ tension: 80, friction: 20 }}
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+        >
+          <div className="hidden md:block">
+            <Button text={"Resume"} />
+          </div>
+        </AnimatedContent>
+        {/* </FadeContent> */}
 
         {/* Hamburger Menu for Mobile */}
         <div
@@ -161,7 +186,7 @@ const Header = () => {
             </Link>
           </ul>
           <div className="mt-8 pl-6">
-            <Button text={"Resume"} className="text-white !border-white hover:bg-white hover:text-logo" />
+            <Button text={"Resume"} className="text-white !border-white hover:bg-white hover:!text-logo !w-full " />
           </div>
         </div>
       </nav>

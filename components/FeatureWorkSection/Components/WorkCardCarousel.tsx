@@ -8,6 +8,9 @@ import './styles.css'
 import { Navigation } from 'swiper/modules';
 import WorkCard from './WorkCard';
 import { workData } from '@/Data/workData';
+import AnimatedContent from '@/components/Animations/AnimatedContent';
+import SpotlightCard from '@/components/Animations/SpotlightCard';
+import Magnet from '@/components/Animations/Magnet';
 
 const WorkCardCarousel = () => {
   return (
@@ -21,21 +24,45 @@ const WorkCardCarousel = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[ Navigation]}
+          modules={[Navigation]}
           className="mySwiper"
         >
           {workData.map((card, index) => (
             <SwiperSlide key={index}>
-              <WorkCard image={card.image} title={card.title} link={card.link} />
+              <AnimatedContent
+                distance={250}
+                direction="vertical"
+                reverse={false}
+                config={{ tension: 80, friction: 20 }}
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
+              >
+                {/* <Magnet padding={20} disabled={false} magnetStrength={10}> */}
+                  <WorkCard image={card.image} title={card.title} link={card.link} />
+                {/* </Magnet> */}
+              </AnimatedContent>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
-      <div className="flex flex-col gap-4 md:hidden justify-center items-center">
+      <div className="flex flex-col gap-4 md:hidden justify-center items-center ">
 
         {workData.map((card, index) => (
+          <AnimatedContent
+            distance={150}
+            direction="vertical"
+            reverse={false}
+            config={{ tension: 80, friction: 20 }}
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+          >
             <WorkCard image={card.image} title={card.title} link={card.link} />
+          </AnimatedContent>
 
         ))}
       </div>

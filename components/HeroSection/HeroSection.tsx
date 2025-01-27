@@ -1,6 +1,7 @@
 import React from 'react';
 import SkillsAutoScroll from './components/SkillsAutoScroll';
 import TypeWriter from '../TypeWriter/TypeWriter';
+import FadeContent from '../Animations/FadeContent';
 
 const typoData: string[] = [
   'ux and ui design',
@@ -23,35 +24,39 @@ const HeroSection = () => {
           className="absolute top-[-8rem] left-[3rem] w-[47px] h-[67px] bounce-effect "
           draggable={false}
         />
-        <h1 className="hidden md:block font-nanum text-[52px] md:text-[120px] leading-[52px]  md:leading-[130px] font-[800] ">
-          Shaping <span className="relative inline-block">
-            <span className="relative font-nanum text-[48px] md:text-[120px] font-[800] italic  ">
+
+        <FadeContent blur={true} duration={1500} easing="ease-out" initialOpacity={0}>
+
+          <h1 className="hidden md:block font-nanum text-[52px] md:text-[120px] leading-[52px]  md:leading-[130px] font-[800] ">
+            Shaping <span className="relative inline-block">
+              <span className="relative font-nanum text-[48px] md:text-[120px] font-[800] italic  ">
+                ideas
+                <img
+                  src="/images/decoresImg/idea_eclipse.png"
+                  alt="Eclipse Decor"
+                  className="absolute top-[-30px] w-[382px] h-[100px] md:h-[185px] cicular-effect"
+                />
+              </span>{' '}
+              into
+            </span>
+            <br />
+            intuitive experiences with
+          </h1>
+
+          <h1 className="block md:hidden font-nanum text-[52px] md:text-[120px] leading-[52px]  md:leading-[130px] font-[800] ">
+            Shaping {" "}
+            <span className="relative font-nanum text-[48px] md:text-[120px] font-[800] italic ">
               ideas
               <img
                 src="/images/decoresImg/idea_eclipse.png"
                 alt="Eclipse Decor"
-                className="absolute top-[-30px] w-[382px] h-[100px] md:h-[185px] cicular-effect"
+                className="absolute top-[-30px] left-0 w-[382px] h-[100px] md:h-[185px] cicular-effect "
               />
             </span>{' '}
-            into
-          </span>
-          <br />
-          intuitive experiences with
-        </h1>
+            into intuitive experiences with
 
-        <h1 className="block md:hidden font-nanum text-[52px] md:text-[120px] leading-[52px]  md:leading-[130px] font-[800] ">
-          Shaping {" "}
-          <span className="relative font-nanum text-[48px] md:text-[120px] font-[800] italic ">
-            ideas
-            <img
-              src="/images/decoresImg/idea_eclipse.png"
-              alt="Eclipse Decor"
-              className="absolute top-[-30px] left-0 w-[382px] h-[100px] md:h-[185px] cicular-effect "
-            />
-          </span>{' '}
-          into intuitive experiences with
-
-        </h1>
+          </h1>
+        </FadeContent>
         {/* Curve Arrow */}
         <img
           src="/images/decoresImg/curve_arrow.png"
