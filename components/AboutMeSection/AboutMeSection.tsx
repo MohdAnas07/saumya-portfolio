@@ -9,13 +9,16 @@ const AboutMeSection = () => {
   return (
     <div id='achievements' className='bg-[#FFF3E8]'>
 
-      <div className=" w-full font-nanum text-[48px] md:text-[80px] text-[#3C3C3C] font-[800] mb-4 text-center mx-auto flex justify-center ">
-        <BlurText
+      <div className=" w-full font-nanum text-[48px] md:text-[80px] text-[#3C3C3C] font-[800] mb-4 text-center mx-auto flex justify-center items-center ">
+        {/* <BlurText
           text={'Ab@ut me'}
           delay={150}
           animateBy="words"
           direction="top"
-        />
+        /> */}
+        Ab
+        <img src="/images/@.png" alt="@ img" className='w-[25px] h-[35px] md:w-[33px] md:h-[52px]' />
+        ut me
       </div>
 
       <div className=" py-16 px-6 pt-0 lg:px-24 flex flex-col md:flex-row items-center justify-center gap-20">
