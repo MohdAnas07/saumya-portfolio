@@ -4,11 +4,12 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import BlurText from '../Animations/BlurText'
 import SplitText from '../Animations/SplitText'
 import AnimatedContent from '../Animations/AnimatedContent'
+import { MdMailOutline } from 'react-icons/md'
 
 const ContactSection = () => {
   return (
     <>
-      <div id='contact' className=" inset-0 -z-10 h-auto w-full bg-[#8A6C59] bg-[linear-gradient(to_right,#DEDCD3_1px,transparent_1px)] bg-[size:12rem] md:bg-[size:24rem] bg-center rounded-t-[50px] text-white ">
+      <div id='contact' className=" inset-0 -z-10 h-auto w-full bg-[#8A6C59] bg-[linear-gradient(to_right,#FDF8E71A_1px,transparent_1px)] bg-[size:12rem] md:bg-[size:24rem] bg-center rounded-t-[50px] text-white ">
 
         <BlurText
           text="LET’S CONNECT"
@@ -16,7 +17,7 @@ const ContactSection = () => {
           animateBy="letters"
           direction="top"
           // onAnimationComplete={handleAnimationComplete}
-          className=' text-[44px] lg:text-[180px] text-center font-montserrat font-[800] text-white py-6 md:py-3 '
+          className=' text-[44px] lg:text-[180px] text-center font-montserrat font-[800] text-white py-6 md:py-3 pl-5 md:pl-0 '
         />
 
         {/* <SplitText
@@ -32,8 +33,8 @@ const ContactSection = () => {
 
         </h1> */}
 
-        <div className=' flex justify-between items-center px-6 md:px-20 pt-10 pb-16 '>
-          <div className=' relative w-[60%] md:w-[335px] font-annie text-[14px] md:text-[30px]'>
+        <div className=' flex justify-between flex-col md:flex-row gap-10 md:gap-1  items-center px-6 md:px-20 pt-10 pb-16 '>
+          <div className=' relative w-[60%] md:w-[335px] font-annie text-[16px] md:text-[30px]'>
             <AnimatedContent
               distance={150}
               direction="horizontal"
@@ -57,8 +58,12 @@ const ContactSection = () => {
             </AnimatedContent>
           </div>
 
+          <div className=' flex md:hidden items-center justify-center text-[16px] md:text-2xl gap-3 '>
+            <MdMailOutline size={25} />
+            <span>gautam.saumya11@gmail.com</span>
+          </div>
 
-          <ul className=' flex flex-col gap-2'>
+          <ul className=' flex flex-row md:flex-col gap-9 md:gap-2'>
             <AnimatedContent
               distance={150}
               direction="vertical"
@@ -102,11 +107,15 @@ const ContactSection = () => {
               </Link>
             </AnimatedContent>
           </ul>
+
         </div>
+
+        <div className='hidden md:flex items-center justify-center pb-10 text-2xl gap-3 '>
+          <MdMailOutline size={25} />
+          <span>gautam.saumya11@gmail.com</span>
+        </div>
+
       </div>
-
-
-
     </>
   )
 }

@@ -31,12 +31,12 @@ const AboutMeSection = () => {
             scale={1.1}
             threshold={0.2}
           >
-            <h6 className="font-montserrat text-[18px] md:text-[40px] leading-[1.8] text-[#333]">
-              I’m <span className="relative font-bold text-[#6D4C41]">
+            <h6 className="font-montserrat text-[18px] md:text-[40px] leading-[1.4] text-[#333]">
+              I’m <span className="relative font-bold ">
                 SAUMYA GAUTAM
                 <InfoBox
                   text='Dehli'
-                  ClassName='md:bottom-[-30px] left-0'
+                  ClassName='md:bottom-[-25px] left-0'
                 />
               </span>
 
@@ -51,7 +51,7 @@ const AboutMeSection = () => {
                 USER-CENTERED DESIGNS
                 <InfoBox
                   text='Empathy'
-                  ClassName='bottom-[-30px] left-[40%]'
+                  ClassName='bottom-[-25px] left-[40%]'
                 />
               </span> that solve real-world problems.
             </h6>
@@ -75,7 +75,7 @@ const AboutMeSection = () => {
         <div className=" flex items-center justify-center order-1 md:order-2 w-full md:w-[40%]">
           <AnimatedContent
             distance={250}
-            direction="horizontal"
+            direction="vertical"
             reverse={false}
             config={{ tension: 80, friction: 20 }}
             initialOpacity={0}
